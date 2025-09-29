@@ -37,9 +37,6 @@ def main():
     else:
         print("Enter packets as 'serial,priority'. Type 'done' when finished.")
         while True:
-            if len(packets)  >= 10:
-                print("Maximum of 10 packets reached.")
-                break
             user_input = input ("> ")
             if user_input.lower() == "done":
                 break
