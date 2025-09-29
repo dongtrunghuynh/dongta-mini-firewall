@@ -6,18 +6,28 @@ def process_packets(packet):
     return sorted(packet, key=lambda x: (x[1], x[0])) # x[1] is the position of the priority, x[0] is the position of the id
 
 def main():
-    packets = []
+    print("Enter packets as 'serial,priority'. Type 'done' when finished.")
+    packets = set()
     while True:
+        if len(packets)  >= 10:
+            print("Maximum of 10 packets reached.")
+            break
         user_input = input ("> ")
         if user_input.lower() == "done":
             break
         try:
             serial, priority = map(int, user_input.split(","))
-            packets.append((serial, priority))
+            packet = (serial,priority)
+            if packet in packets:
+                print(f"Packet with id {serial} already exists. Please enter a unique id.")
+            else:
+                packets.add(packet)
         except ValueError:
             print("Invalid input. Please enter in the format 'id,priority' or 'done' to finish.")
     
-    result = process_packets(packets)
+    packet_list = list(packets)
+    
+    result = process_packets(packet_list)
     print("\nOrdered Packets: ")
     for serial, priority in result:
         print(f"Serial: {serial}, Priority: {priority}")
