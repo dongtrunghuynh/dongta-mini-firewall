@@ -46,15 +46,15 @@ def main():
                 if packet in packets:
                     print(f"Packet with id {serial} already exists. Please enter a unique id.")
                 else:
-                    packets.add(packet)
+                    packets.append(packet)
             except ValueError:
                 print("Invalid input. Please enter in the format 'id,priority' or 'done' to finish.")
 
     print("\nOrdered Packets (by batch of 10):")
     for batch_num, batch in enumerate(batch_process(packets), start=1):
-        print(f"\nBatch {batch_num}: {batch}")
+        print(f"\nBatch {batch_num}")
         for serial, priority in batch:
-            print(f"Processing packet with id {serial}, and priority: {priority}")
+            print(f"{serial},{priority}")
 
 if __name__ == "__main__":
     main() 

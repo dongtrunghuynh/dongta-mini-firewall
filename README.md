@@ -1,4 +1,4 @@
-# dongta-mini-firewall
+# minifirewall.py
 ### A simple python program that simulates a mini firewall which filters and processes network packets.
 
 ### The firewally enforces these rules:
