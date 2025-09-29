@@ -10,12 +10,12 @@
 
 ## How to run
 git clone https://github.com/your-username/mini-firewall.git
-cd mini-firewall
+cd minifirewall
 
 ## run the firewall
-python firewall.py
+python minifirewall.py
 
-## enter the packets in the format of serial,priority. program will stop once you reached the 10th packets
+## enter the packets in the format of serial,priority. program will stop once you enter 'done'
 
 ### examples
 Enter up to 10 packets as 'serial,priority' (type 'done' to finish):
