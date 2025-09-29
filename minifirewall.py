@@ -52,9 +52,9 @@ def main():
 
     print("\nOrdered Packets (by batch of 10):")
     for batch_num, batch in enumerate(batch_process(packets), start=1):
-        print(f"Batch {batch_num}: {batch}")
+        print(f"\nBatch {batch_num}: {batch}")
         for serial, priority in batch:
-            print(f"Processing packet with id {serial} and priority {priority}")
+            print(f"Processing packet with id {serial}, and priority: {priority}")
 
 if __name__ == "__main__":
     main() 
