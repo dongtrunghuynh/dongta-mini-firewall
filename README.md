@@ -40,3 +40,7 @@ Ordered Packets:
 - Serial: 1, Priority: 5
 - Serial: 5, Priority: 7
 - Serial: 6, Priority: 10
+
+### run the firewall with a csv file
+
+py or python minifirewall.py packets.csv 
