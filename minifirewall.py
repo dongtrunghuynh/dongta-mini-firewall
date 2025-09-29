@@ -19,7 +19,7 @@ def read_from_file(file_path):
     with open(file_path, 'r') as file:
         for line in file:
             line = line.strip()
-            if not line or line.straswith('#') or line.startswith("serial"):
+            if not line or line.startswith('#') or line.startswith("serial"):
                 continue
             try:
                 serial, priority = map(int, line.split(","))
