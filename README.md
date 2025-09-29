@@ -19,24 +19,24 @@ python firewall.py
 
 ### examples
 Enter up to 10 packets as 'serial,priority' (type 'done' to finish):
-> 1,5
-> 2,3
-> 3,1
-> 4,3
-> 5,7
-> 6,10
-> 10,1
-> 10,2
-> done
+- > 1,5
+- > 2,3
+- > 3,1
+- > 4,3
+- > 5,7
+- > 6,10
+- > 10,1
+- > 10,2
+- > done
 
 
 ### output
 Ordered Packets:
-Serial: 3, Priority: 1
-Serial: 10, Priority: 1
-Serial: 10, Priority: 2
-Serial: 2, Priority: 3
-Serial: 4, Priority: 3
-Serial: 1, Priority: 5
-Serial: 5, Priority: 7
-Serial: 6, Priority: 10
+- Serial: 3, Priority: 1
+- Serial: 10, Priority: 1
+- Serial: 10, Priority: 2
+- Serial: 2, Priority: 3
+- Serial: 4, Priority: 3
+- Serial: 1, Priority: 5
+- Serial: 5, Priority: 7
+- Serial: 6, Priority: 10
