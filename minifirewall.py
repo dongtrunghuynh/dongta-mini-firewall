@@ -35,8 +35,8 @@ def read_from_file(file_path):
             if not (1 <= priority <= 10):
                 print(f"Skipping invalid priority {priority} for packet id {serial} on line {line}. Must be 1-10.")
                 continue # skip invalid priorities silently
-        packet = (serial, priority)
-        packets.append(packet)
+            packet = (serial, priority)
+            packets.append(packet)
     return packets
 
 def main():
