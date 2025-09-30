@@ -54,7 +54,7 @@ def main():
                 break
             if not user_input:
                 continue
-            parts = re.split(r'[,\s]+', user_input
+            parts = re.split(r'[,\s]+', user_input)
             if len(parts) != 2 or not all(p.isdigit() for p in parts):
                 print("Invalid input. Enter as 'serial,priority'")
                 continue
