@@ -35,13 +35,14 @@ def read_from_file(file_path):
             if not (1 <= priority <= 10):
                 print(f"Skipping invalid priority {priority} for packet id {serial} on line {line}. Must be 1-10.")
                 continue # skip invalid priorities silently
-            packet = (serial, priority)
+        packet = (serial, priority)
+        packets.append(packet)
     return packets
 
 def main():
     packets = []
     if len(sys.argv) > 1:
-        file_path = sys.argv[1:]
+        file_path = sys.argv[1]
         packets = read_from_file(file_path)
     else:
         print(f"Enter up to {BATCH_SIZE} packets 'serial,priority' (type 'done' to finish): ")
@@ -60,9 +61,10 @@ def main():
                 continue
             serial, priority = map(int, parts)
             if not (1 <= priority <= 10):
-                print(f"Duplicate packet {packet}. Ignored.")
-            else:
-                packets.append(packet)
+                print(f"Skipping invalid priority {priority} for packet id {serial}. Must be 1-10.")
+                continue
+            packet = (serial, priority)
+            packets.append(packet)
     if not packets:
         print("No valid packets to process.")
         return
